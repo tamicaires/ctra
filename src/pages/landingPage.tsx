@@ -179,7 +179,7 @@ export default function LandingPage() {
             <div className="px-4 py-2">
               <Button
                 variant="outline"
-                className="w-full text-zinc-50 bg-primary"
+                className="w-full bg-black text-zinc-50"
               >
                 Aula Experimental
               </Button>
