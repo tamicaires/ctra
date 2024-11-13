@@ -18,7 +18,7 @@ import whiteLogo from "@/assets/white-logo.png";
 import bjjTurma from "@/assets/bjj-turma.jpg";
 import kidsTurma from "@/assets/kids-turma.jpg";
 import femininoTurma from "@/assets/feminino-turma.jpg";
-import muayThaiTurma from "@/assets/muaythai-turma.png";
+import muayThaiTurma from "@/assets/muathai-turma.jpg";
 import noGiTurma from "@/assets/no-gi-turma.jpg";
 import eventobjj from "@/assets/eventoBjj.png";
 import eventoNordestePan from "@/assets/evento-nordeste-pan.png";
