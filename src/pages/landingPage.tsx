@@ -18,9 +18,14 @@ import whiteLogo from "@/assets/white-logo.png";
 import bjjTurma from "@/assets/bjj-turma.jpg";
 import kidsTurma from "@/assets/kids-turma.jpg";
 import femininoTurma from "@/assets/feminino-turma.jpg";
-import muayThaiTurma from "@/assets/muathai-turma.jpg";
+import muayThaiTurma from "@/assets/muaythai-turma.png";
 import noGiTurma from "@/assets/no-gi-turma.jpg";
 import eventobjj from "@/assets/eventoBjj.png";
+import eventoNordestePan from "@/assets/evento-nordeste-pan.png";
+import eventoTainan from "@/assets/evento-tainan.png";
+import rodrigoArgentino from "@/assets/rodrigo-argentino.png";
+import jonadabe from "@/assets/jonadabe.png";
+import laynne from "@/assets/laynne.png";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -32,6 +37,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Star } from "@/components/star";
+import { Routes } from "@/enum/route";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -132,6 +138,7 @@ export default function LandingPage() {
               <Button
                 variant="outline"
                 className="hidden md:block text-zinc-50"
+                onClick={() => window.open(Routes.Whatsapp, "_blank")}
               >
                 Aula Experimental
               </Button>
@@ -224,6 +231,7 @@ export default function LandingPage() {
                       size="lg"
                       variant="default"
                       className="border border-zinc-400"
+                      onClick={() => window.open(Routes.Whatsapp, "_blank")}
                     >
                       Comece Hoje
                     </Button>
@@ -236,6 +244,7 @@ export default function LandingPage() {
                       size="lg"
                       variant="outline"
                       className="text-zinc-50"
+                      onClick={() => window.open(Routes.Whatsapp, "_blank")}
                     >
                       Conheça Mais
                     </Button>
@@ -359,9 +368,9 @@ export default function LandingPage() {
                   image: muayThaiTurma,
                 },
                 {
-                  title: "No-Gi Jiu-Jitsu",
+                  title: "Jiu-Jitsu",
                   description:
-                    "Jiu-Jitsu sem kimono, focado em técnicas adaptadas para situações reais.",
+                    "Jiu-Jitsu tradicional, focado em técnicas de finalização e controle.",
                   icon: <Sword className="h-8 w-8 mb-4" />,
                   image: noGiTurma,
                 },
@@ -394,7 +403,12 @@ export default function LandingPage() {
                       </p>
                     </CardContent>
                     <CardFooter className="flex justify-center">
-                      <Button variant="outline">Saiba Mais</Button>
+                      <Button
+                        variant="outline"
+                        onClick={() => window.open(Routes.Whatsapp, "_blank")}
+                      >
+                        Saiba Mais
+                      </Button>
                     </CardFooter>
                   </Card>
                 </motion.div>
@@ -422,33 +436,30 @@ export default function LandingPage() {
               {[
                 {
                   name: "Básico",
-                  price: "R$ 99,90",
+                  price: "R$ 99,00",
                   description: "Ideal para iniciantes",
                   features: [
-                    "2 aulas por semana",
+                    "Acompanhamento em grupo",
                     "Acesso a uma modalidade",
-                    "Material de treino básico",
                   ],
                 },
                 {
                   name: "Intermediário",
-                  price: "R$ 199,90",
+                  price: "R$ 130,00",
                   description: "Para quem quer se dedicar mais",
                   features: [
-                    "3 aulas por semana",
                     "Acesso a duas modalidades",
-                    "1 aula particular por mês",
+                    "Acompanhamento em grupo",
                   ],
                 },
                 {
-                  name: "Avançado",
-                  price: "R$ 349,90",
+                  name: "Parceria Champions",
+                  price: "R$ 130,00",
                   description: "Para atletas dedicados",
                   features: [
-                    "Aulas ilimitadas",
-                    "Acesso a todas as modalidades",
-                    "2 aulas particulares por mês",
-                    "Acesso a workshops exclusivos",
+                    "Acesso a duas modalidades",
+                    "Academia Champions + Jiu-Jitsu ou",
+                    "Academia Champions + Muay Thai",
                   ],
                 },
               ].map((plan, index) => (
@@ -502,6 +513,7 @@ export default function LandingPage() {
                     <CardFooter>
                       <Button
                         className="w-full"
+                        onClick={() => window.open(Routes.Whatsapp, "_blank")}
                         variant={index === 1 ? "default" : "outline"}
                       >
                         Escolher Plano
@@ -534,23 +546,22 @@ export default function LandingPage() {
                 {
                   name: "Rodrigo Argentino",
                   role: "Head Coach - Jiu-Jitsu",
-                  image: "/placeholder.svg?height=300&width=300",
+                  image: rodrigoArgentino,
                   description:
-                    "Faixa preta 4º grau com mais de 20 anos de experiência.",
+                    "Faixa preta 2º grau com mais de 20 anos de experiência.",
                 },
                 {
-                  name: "Ana Silva",
-                  role: "Instrutora de Muay Thai",
-                  image: "/placeholder.svg?height=300&width=300",
+                  name: "Laynne Bjj",
+                  role: "Instrutora de Jiu Jitsu",
+                  image: laynne,
                   description:
-                    "Campeã nacional e instrutora certificada pela Confederação Brasileira de Muay Thai.",
+                    "Faixa marrom especializada em Jiu-Jitsu feminino e defesa pessoal.",
                 },
                 {
-                  name: "Carlos Santos",
+                  name: "Jonadabe",
                   role: "Instrutor de Jiu-Jitsu",
-                  image: "/placeholder.svg?height=300&width=300",
-                  description:
-                    "Faixa preta especializado em No-Gi e competidor ativo em torneios internacionais.",
+                  image: jonadabe,
+                  description: "Faixa preta especializado em Jiu-Jitsu.",
                 },
               ].map((instructor, index) => (
                 <motion.div
@@ -561,13 +572,13 @@ export default function LandingPage() {
                   transition={{ duration: 0.3 }}
                 >
                   <Card className="bg-white hover:bg-gray-100 transition-colors duration-300 h-full">
-                    <CardContent className="p-6 text-center">
+                    <CardContent className=" text-center">
                       <img
                         src={instructor.image}
                         alt={instructor.name}
                         width={200}
                         height={200}
-                        className="rounded-full mx-auto mb-4"
+                        className="mb-4 w-full object-cover h-72 rounded-lg pl-[-20px] pr-[-20px]"
                       />
                       <h3 className="text-xl font-bold mb-2 text-black">
                         {instructor.name}
@@ -607,18 +618,18 @@ export default function LandingPage() {
                   image: eventobjj,
                 },
                 {
-                  title: "Seminário de Muay Thai",
-                  date: "22 de Agosto, 2024",
+                  title: "Nordeste Panamericano",
+                  date: "EM BREVE",
                   description:
-                    "Seminário especial com campeão mundial de Muay Thai.",
-                  image: eventobjj,
+                    "Campeonato com premiações em todos os absolutos e premiação em todas as categorias.",
+                  image: eventoNordestePan,
                 },
                 {
-                  title: "Open de Jiu-Jitsu No-Gi",
-                  date: "10 de Setembro, 2024",
+                  title: "Seminário com Tainan Dalpra",
+                  date: "08 de Dezembro, 2024",
                   description:
-                    "Competição aberta de Jiu-Jitsu sem kimono para todas as faixas.",
-                  image: eventobjj,
+                    "Seminário com o campeão mundial Tainan Dalpra, faixa preta.",
+                  image: eventoTainan,
                 },
               ].map((event, index) => (
                 <motion.div
@@ -644,7 +655,12 @@ export default function LandingPage() {
                       <p>{event.description}</p>
                     </CardContent>
                     <CardFooter>
-                      <Button variant="default">Inscreva-se</Button>
+                      <Button
+                        variant="default"
+                        onClick={() => window.open(Routes.Eventos, "_blank")}
+                      >
+                        Inscreva-se
+                      </Button>
                     </CardFooter>
                   </Card>
                 </motion.div>
