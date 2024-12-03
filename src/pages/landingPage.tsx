@@ -38,6 +38,7 @@ import {
 } from "@/components/ui/card";
 import { Star } from "@/components/star";
 import { Routes } from "@/enum/route";
+import TournamentCards from "@/components/TournamentsCards";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -592,83 +593,7 @@ export default function LandingPage() {
             </div>
           </div>
         </motion.section>
-
-        <motion.section
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          id="events"
-          className="py-12 md:py-24 bg-black text-white"
-        >
-          <div className="container mx-auto px-4">
-            <motion.h2
-              variants={fadeInUp}
-              className="text-3xl md:text-4xl font-bold mb-12 text-center"
-            >
-              Eventos e Campeonatos
-            </motion.h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Campeonato Interno de Jiu-Jitsu",
-                  date: "15 de Julho, 2024",
-                  description:
-                    "Competição amistosa entre os alunos do CT Rodrigo Argentino.",
-                  image: eventobjj,
-                },
-                {
-                  title: "Nordeste Panamericano",
-                  date: "EM BREVE",
-                  description:
-                    "Campeonato com premiações em todos os absolutos e premiação em todas as categorias.",
-                  image: eventoNordestePan,
-                },
-                {
-                  title: "Seminário com Tainan Dalpra",
-                  date: "08 de Dezembro, 2024",
-                  description:
-                    "Seminário com o campeão mundial Tainan Dalpra, faixa preta.",
-                  image: eventoTainan,
-                },
-              ].map((event, index) => (
-                <motion.div
-                  key={index}
-                  variants={zoomIn}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Card className="overflow-hidden bg-white text-black h-full">
-                    <img
-                      src={event.image}
-                      alt={event.title}
-                      width={300}
-                      height={500}
-                      className="w-full object-cover h-80"
-                    />
-                    <CardHeader>
-                      <CardTitle>{event.title}</CardTitle>
-                      <CardDescription>{event.date}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p>{event.description}</p>
-                    </CardContent>
-                    <CardFooter>
-                      <Button
-                        variant="default"
-                        onClick={() => window.open(Routes.Eventos, "_blank")}
-                      >
-                        Inscreva-se
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.section>
-
+        <TournamentCards />
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -689,11 +614,11 @@ export default function LandingPage() {
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <MapPin className="mr-2" />
-                    <span>Rua das Artes Marciais, 123 - São Paulo, SP</span>
+                    <span>Rua Padre Cicero, 400A - Imperatriz - MA</span>
                   </li>
                   <li className="flex items-center">
                     <Phone className="mr-2" />
-                    <span>(11) 1234-5678</span>
+                    <span>(99) 98212-2778</span>
                   </li>
                   <li className="flex items-center">
                     <Mail className="mr-2" />
@@ -704,20 +629,12 @@ export default function LandingPage() {
                   <h4 className="text-xl font-bold mb-2">Siga-nos</h4>
                   <div className="flex space-x-4">
                     <motion.a
-                      href="#"
+                      href="https://www.instagram.com/ctra.lutas_itz1/#"
                       className="text-gray-600 hover:text-primary"
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
                     >
                       <Instagram />
-                    </motion.a>
-                    <motion.a
-                      href="#"
-                      className="text-gray-600 hover:text-primary"
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <Facebook />
                     </motion.a>
                   </div>
                 </div>
