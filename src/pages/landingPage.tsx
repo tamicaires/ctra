@@ -5,7 +5,6 @@ import {
   Phone,
   Mail,
   Instagram,
-  Facebook,
   Users,
   Award,
   Dumbbell,
@@ -20,9 +19,6 @@ import kidsTurma from "@/assets/kids-turma.jpg";
 import femininoTurma from "@/assets/feminino-turma.jpg";
 import muayThaiTurma from "@/assets/muathai-turma.jpg";
 import noGiTurma from "@/assets/no-gi-turma.jpg";
-import eventobjj from "@/assets/eventoBjj.png";
-import eventoNordestePan from "@/assets/evento-nordeste-pan.png";
-import eventoTainan from "@/assets/evento-tainan.png";
 import rodrigoArgentino from "@/assets/rodrigo-argentino.png";
 import jonadabe from "@/assets/jonadabe.png";
 import laynne from "@/assets/laynne.png";
