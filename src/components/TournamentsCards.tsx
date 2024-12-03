@@ -24,7 +24,7 @@ interface TournamentProps {
   location: string;
   imageUrl: string;
   isOpen: boolean;
-  eventType: 'tournament' | 'seminar';
+  eventType: "tournament" | "seminar";
   prices?: {
     gi?: PriceCategory;
     nogi?: PriceCategory;
@@ -41,7 +41,7 @@ export default function TournamentCards() {
       location: "GINÁSIO",
       imageUrl: eventobjj,
       isOpen: false,
-      eventType: 'tournament',
+      eventType: "tournament",
       prices: {
         gi: { kids: 80.0, adult: 95.0 },
         nogi: { kids: 75.0, adult: 80.0 },
@@ -50,11 +50,11 @@ export default function TournamentCards() {
     {
       title: "Nordeste Panamericano",
       subtitle: "GI-NOGI",
-      date: "EM BREVE",
-      location: "GINÁSIO CESEP",
+      date: "19 de Janeiro de 2025",
+      location: "EM BREVE",
       imageUrl: eventoNordestePan,
       isOpen: true,
-      eventType: 'tournament',
+      eventType: "tournament",
       prices: {
         gi: { kids: 80.0, adult: 95.0 },
         nogi: { kids: 75.0, adult: 80.0 },
@@ -64,13 +64,21 @@ export default function TournamentCards() {
       title: "Seminário com Tainan Dalpra",
       subtitle: "GI-NOGI",
       date: "08 de DEZEMBRO, 2024",
-      location: "GINÁSIO CESEP",
+      location: "Mazilli Sports",
       imageUrl: eventoTainan,
       isOpen: true,
-      eventType: 'seminar',
+      eventType: "seminar",
       batches: [
-        { number: 1, price: { single: 150.0 }, endDate: "30 de NOVEMBRO, 2024" },
-        { number: 2, price: { single: 180.0 }, endDate: "07 de DEZEMBRO, 2024" },
+        {
+          number: 1,
+          price: { single: 100.0 },
+          endDate: "15 de NOVEMBRO, 2024",
+        },
+        {
+          number: 2,
+          price: { single: 150.0 },
+          endDate: "06 de DEZEMBRO, 2024",
+        },
       ],
     },
   ];
@@ -128,19 +136,27 @@ export default function TournamentCards() {
                   </div>
 
                   <div className="space-y-4">
-                    {tournament.eventType === 'tournament' && tournament.prices && (
-                      <>
-                        {tournament.prices.gi && (
-                          <PriceSection title="GI" prices={tournament.prices.gi} />
-                        )}
-                        {tournament.prices.nogi && (
-                          <PriceSection title="NOGI" prices={tournament.prices.nogi} />
-                        )}
-                      </>
-                    )}
-                    {tournament.eventType === 'seminar' && tournament.batches && (
-                      <BatchesSection batches={tournament.batches} />
-                    )}
+                    {tournament.eventType === "tournament" &&
+                      tournament.prices && (
+                        <>
+                          {tournament.prices.gi && (
+                            <PriceSection
+                              title="GI"
+                              prices={tournament.prices.gi}
+                            />
+                          )}
+                          {tournament.prices.nogi && (
+                            <PriceSection
+                              title="NOGI"
+                              prices={tournament.prices.nogi}
+                            />
+                          )}
+                        </>
+                      )}
+                    {tournament.eventType === "seminar" &&
+                      tournament.batches && (
+                        <BatchesSection batches={tournament.batches} />
+                      )}
                   </div>
                 </div>
 
@@ -194,4 +210,3 @@ function BatchesSection({ batches }: { batches: Batch[] }) {
     </div>
   );
 }
-
