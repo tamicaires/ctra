@@ -21,7 +21,6 @@ import muayThaiTurma from "@/assets/muathai-turma.jpg";
 import noGiTurma from "@/assets/no-gi-turma.jpg";
 import rodrigoArgentino from "@/assets/rodrigo-argentino.png";
 import jonadabe from "@/assets/jonadabe.png";
-import laynne from "@/assets/laynne.png";
 import liaCampelo from "@/assets/lia-campelo.png";
 
 import { Button } from "@/components/ui/button";
