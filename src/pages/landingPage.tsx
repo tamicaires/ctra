@@ -22,6 +22,7 @@ import noGiTurma from "@/assets/no-gi-turma.jpg";
 import rodrigoArgentino from "@/assets/rodrigo-argentino.png";
 import jonadabe from "@/assets/jonadabe.png";
 import laynne from "@/assets/laynne.png";
+import liaCampelo from "@/assets/lia-campelo.png";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -548,9 +549,9 @@ export default function LandingPage() {
                     "Faixa preta 2º grau com mais de 20 anos de experiência.",
                 },
                 {
-                  name: "Laynne Bjj",
+                  name: "Lia Campelo",
                   role: "Instrutora de Jiu Jitsu",
-                  image: laynne,
+                  image: liaCampelo,
                   description:
                     "Faixa marrom especializada em Jiu-Jitsu feminino e defesa pessoal.",
                 },
